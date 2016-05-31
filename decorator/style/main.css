@@ -1,0 +1,36 @@
+body {
+    height: 500px;
+    width: 600px;
+}
+
+#clothes-title {
+    margin: 40px;
+}
+
+#clothes-container {
+    margin: 40px;
+}
+
+.shirt {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/shirt.png");
+    background-size: cover;
+    border: 2px solid;
+}
+
+.lsized-shirt {
+    width: 80px;
+}
+
+.colorless-shirt {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.highlighted-shirt {
+    background-color: red;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+    <div id="settings">
+        <select id="typeSelect">
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+        </select>
+        <button id="buildControl">build</button>
+    </div>
+    <div id="info">
+        <span>size: </span>
+        <span id="bricksAmount">0</span>
+    </div>
+    <div id="wall"></div>
+</body>
+
+<script src="src/brick/IBrick.js"></script>
+<script src="src/brick/GreenBrick.js"></script>
+<script src="src/brick/RedBrick.js"></script>
+<script src="src/brick/BlueBrick.js"></script>
+<script src="src/brick/OrangeBrick.js"></script>
+
+<script src="src/constant/BrickSize.js"></script>
+<script src="src/constant/BrickType.js"></script>
+<script src="src/factory/BrickFactory.js"></script>
+
+<script src="src/main.js"></script>
+</html>

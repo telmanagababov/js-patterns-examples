@@ -1,0 +1,86 @@
+body {
+    margin: 40px;
+}
+
+#factories {
+    border: dashed 2px;
+    padding: 5px;    
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#factories .factory {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    background-image: url(../img/factory.png);
+    background-size: contain;
+}
+
+#factories .factory.active {
+    outline: 4px solid;
+}
+
+#factories #greenFactory {
+    background-color: #0f0;
+}
+
+#factories #redFactory {
+    background-color: #f00;
+}
+
+#world {
+    position: relative;
+    border: 4px dashed;
+    width: 600px;
+    height: 400px;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+#world .person {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/person.png);
+    background-size: contain;
+}
+
+#world .person.greenPerson {
+    background-color: #0f0;
+}
+
+#world .person.redPerson {
+    background-color: #f00;
+}
+
+#world .animal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/animal.png);
+    background-size: contain;
+}
+
+#world .animal.greenAnimal {
+    background-color: #0f0;
+}
+
+#world .animal.redAnimal {
+    background-color: #f00;
+}
+
+@keyframes move { 
+    25% { transform:rotate(35deg); }
+    50% { transform:rotate(0deg); }
+    75% { transform:rotate(-35deg); }
+    100% { transform:rotate(0deg); } 
+}
+
+@keyframes hide { 
+    50% { opacity: 0 }
+    100% { opacity: 1 } 
+}

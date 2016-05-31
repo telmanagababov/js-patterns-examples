@@ -1,0 +1,80 @@
+/* Title */
+#title {
+  text-align: center;
+}
+
+/* Animals */
+#animals {
+  width: 60px;
+  margin: 60px auto;
+}
+
+#animals .animal {
+  margin: 10px 0px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/animals.jpg);
+  background-size: 240px 240px;
+}
+
+#animals #wolf {
+  background-position: -120px 0px;
+}
+
+#animals #bee {
+  background-position: 0px -60px;
+}
+
+#animals #bird {
+  background-position: 0px 0px;
+}
+
+#animals #penguin {
+  background-position: -60px -120px;
+}
+
+/* Food */
+#food {
+  position: relative;
+  padding: 5px;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto 25px;
+}
+
+body .foodType,
+#food .foodType {
+  float: left;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+body #meat,
+#food #meat {
+  background-image: url(../img/meat.png)
+}
+
+body #flower,
+#food #flower {
+  background-image: url(../img/flower.jpg)
+}
+
+body #worm,
+#food #worm {
+  background-image: url(../img/worm.png);
+}
+
+body #fish,
+#food #fish {
+  background-image: url(../img/fish.jpg);
+}
+
+body #carrot,
+#food #carrot {
+  background-image: url(../img/carrot.png);
+}

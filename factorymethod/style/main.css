@@ -1,0 +1,81 @@
+body {
+    margin: 40px;
+}
+
+#settings {
+    border: dashed 2px;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 186px;
+}
+
+#settings #typeSelect {
+    float: left;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border: 2px solid;
+    cursor: pointer
+}
+
+#settings #buildControl {
+    font: bold 14px cursive;
+    margin: 7px;
+    cursor: pointer;
+}
+
+#info {
+    border: dashed 2px;
+    padding: 5px 20px 5px 5px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font: bold 14px cursive;
+    width: 201px;
+    left: -6px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+#wall {
+    position: relative;
+    border: 4px dashed;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    overflow: auto;
+}
+
+#wall .brick {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/brick.png);
+    background-size: 100% 200%;
+    background-position: 0;
+}
+
+#wall .brick.green {
+    background-color: #0f0;
+}
+
+#wall .brick.red {
+    width: 80px;
+    background-color: #f00;
+}
+
+#wall .brick.blue {
+    height: 80px;
+    background-color: #00f;
+}
+
+#wall .brick.orange {
+    width: 80px;
+    height: 80px;
+    background-color: #f80;
+}

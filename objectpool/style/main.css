@@ -1,0 +1,57 @@
+body {
+    height: 400px;
+    width: 515px;
+}
+
+#info {
+    margin: 10px 0 0 40px;
+}
+
+#info .workers-info {
+    border: double 5px black;
+    width: 196px;
+    height: 70px;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    float: left;
+    margin: 0 10px 0px 0;
+}
+
+#info #free-workers-info,
+#info #busy-workers-info {
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#factories .factory {
+    border: solid 2px black;
+    width: 200px;
+    height: 200px;
+    margin: 40px -26px 0 40px;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    background-image: url(../assets/img/factory.png);
+}
+
+#factories .factory-green {
+    background-color: green;
+}
+
+#factories .factory-red {
+    background-color: red;
+}
+
+.worker {
+    border: solid 1px blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    background-color: #77C;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+}

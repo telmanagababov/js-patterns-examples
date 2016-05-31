@@ -1,0 +1,66 @@
+body {
+  margin: 60px;
+}
+
+#message {
+  width: 280px;
+  padding: 25px;
+  font-size: 24px;
+  text-shadow: 2px 2px 2px black;
+  color: #f50;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #dc9b86 0%,#6f301b 48%,#5b200d 94%,#a2624c 100%);
+}
+
+#configuration {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.info-bold {
+  font-weight: bold;
+}
+
+.info-highlighted {
+  color: #ff0;
+  font-size: 30px;
+}
+
+.info-neutral {
+  color: #33c;
+  font-size: 20px;
+}
+
+.info-underlined {
+  text-decoration: underline;
+}
+
+.info-expanded {
+  text-transform: uppercase;
+}
+
+.info-red {
+  color: red;
+}
+
+.info-animated {
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    font-size: 22px;
+  }
+  50% {
+    opacity: 1;
+    font-size: 34px;
+  }
+  100% {
+    opacity: 0;
+    font-size: 22px;
+  }
+}

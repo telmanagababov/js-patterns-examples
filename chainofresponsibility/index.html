@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+    <span id="title">
+        <h2>Feed animals</h2>
+        <p>(click on a food to feed the animals)</p>
+    </span>
+    <div id="food">
+        <div class="foodType" id="meat"></div>
+        <div class="foodType" id="flower"></div>
+        <div class="foodType" id="worm"></div>
+        <div class="foodType" id="fish"></div>
+        <div class="foodType" id="carrot"></div>
+    </div>
+    <div id="animals">
+        <div class="animal" id="wolf"></div>
+        <div class="animal" id="bee"></div>
+        <div class="animal" id="bird"></div>
+        <div class="animal" id="penguin"></div>
+    </div>
+    <div id="game-field"></div>
+</body>
+
+<script src="src/constants/Food.js"></script>
+<script src="src/base/Handler.js"></script>
+
+<script src="src/animal/Bee.js"></script>
+<script src="src/animal/Bird.js"></script>
+<script src="src/animal/Penguin.js"></script>
+<script src="src/animal/Wolf.js"></script>
+
+<script src="src/main.js"></script>
+</html>

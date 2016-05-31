@@ -1,0 +1,112 @@
+body {
+  margin: 40px;
+  width: 600px;
+  position: relative;
+}
+
+#tickets-panel {
+  width: 100%;
+  padding: 20px;
+  border: 4px solid #000;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.ticket {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: url("http://www.onlinebingo-gaming.com/wp-content/uploads//2010/05/75-bingo-card-258x300.jpg");
+  background-size: 100% 100%;
+  display: inline-block;
+  cursor: pointer;
+  border: 4px solid rgba(185, 70, 25, 1);
+  border-radius: 6px;
+  overflow: hidden;
+  transfrom: translate(0, 0);
+  box-shadow: 0 6px 4px -4px #000;
+  transition: box-shadow 0.25s transform 0.25s;
+}
+
+.ticket:hover {
+  transform: translate(0, -5px);
+  box-shadow: 0 12px 8px -8px #000;
+}
+
+.ticket:before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(185, 110, 25, 0.8);
+  content: ""
+}
+
+.ticket.selected {
+  border: 4px solid rgba(255, 80, 15, 1);
+}
+
+.ticket.selected:before {
+  background-color: rgba(255, 140, 15, 0.8);
+}
+
+#history-panel,
+#config-panel {
+  position: absolute;
+  margin: 20px 0;
+  border: dashed 2px;
+  display: inline-block;
+  padding: 5px;
+}
+
+#history-panel button,
+#config-panel button {
+  padding: 5px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#history-panel {
+  left: 0;
+}
+
+#config-panel {
+  right: 0;
+}
+
+#config-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 594px;
+  height: 340px;
+  border: 4px solid #aaa;
+  background: #eee;
+  opacity: 0.95;
+  border-radius: 8px;
+}
+
+#config-area-input {
+  width: 589px;
+  height: 260px;
+  resize: none;
+}
+
+#config-area-ok,
+#config-area-cancel {
+  position: absolute;
+  padding: 5px;
+  width: 80px;
+  bottom: 13px;
+}
+
+#config-area-ok {
+  right: 5px;
+}
+
+#config-area-cancel {
+  left: 5px;
+}
+
+.hidden {
+  display: none;
+}

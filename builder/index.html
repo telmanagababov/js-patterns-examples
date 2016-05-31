@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+    <div id="controls">
+        <div class="selectors-row">
+            <span>Type</span>
+            <select id="type-select">
+                <option value="circle">circle</option>
+                <option value="rectangle">rectangle</option>
+            </select>
+            <span>Border size</span>
+            <select id="border-size-select">
+                <option value="0">0</option>
+                <option value="2px">2px</option>
+                <option value="4px">4px</option>
+                <option value="8px">8px</option>
+            </select>
+            <span>Border Color</span>
+            <select id="border-color-select">
+                <option value="orange">orange</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+        <div class="selectors-row">
+            <span>Border Type</span>
+            <select id="border-type-select">
+                <option value="none">none</option>
+                <option value="solid">solid</option>
+                <option value="dashed">dashed</option>
+                <option value="dotted">dotted</option>
+            </select>
+            <span>Background Color</span>
+            <select id="background-color-select">
+                <option value="orange">orange</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select>
+            <span>Text</span>
+            <select id="text-select">
+                <option value="">none</option>
+                <option value="hello">hello</option>
+                <option value="bye">bye</option>
+            </select>
+        </div>
+        <div class="selectors-row">
+            <span>Text Color</span>
+            <select id="text-color-select">
+                <option value="orange">orange</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select>
+            <span>Text size</span>
+            <select id="text-size-select">
+                <option value="0">0</option>
+                <option value="20px">20px</option>
+                <option value="35px">35px</option>
+                <option value="50px">50px</option>
+            </select>
+            <span>Animation Type</span>
+            <select id="animation-select">
+                <option value="none">none</option>
+                <option value="fade">fade</option>
+                <option value="rotate">rotate</option>
+            </select>
+        </div>
+    </div>
+    <button id="build-control">build</button>
+    <div id="result-field"></div>
+</body>
+
+<script src="src/AnimationView.js"></script>
+<script src="src/AnimationBuilder.js"></script>
+<script src="src/main.js"></script>
+</html>

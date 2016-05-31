@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+<div id="message">
+  <p>Some text with some number value: 2500.50
+</div>
+<div id="configuration">
+  <label for="type">Message type </label>
+  <select id="type-select" name="type">
+    <option value="win">win</option>
+    <option value="info">info</option>
+    <option value="warning">warning</option>
+    <option value="error">error</option>
+  </select>
+</div>
+</body>
+
+<script src="src/Message.js"></script>
+<script src="src/MessageBehavior.js"></script>
+<script src="src/InfoMessageBehavior.js"></script>
+<script src="src/ErrorMessageBehavior.js"></script>
+<script src="src/WarningMessageBehavior.js"></script>
+<script src="src/WinMessageBehavior.js"></script>
+<script src="src/main.js"></script>
+</html>

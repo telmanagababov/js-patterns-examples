@@ -1,0 +1,61 @@
+body {
+    margin: 40px;
+}
+
+#info-panel {
+    position: relative;
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+
+#game-field {
+    position: relative;
+    border: 4px solid green;
+    width: 600px;
+    height: 500px;
+    margin: 20px 10px;
+    padding: 10px; 
+}
+
+#game-field .dino {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/dinos.jpg);
+    background-size: 120px 80px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px black;
+    animation:spin 4s linear infinite;
+}
+
+#game-field .dino-yellow {
+    background-position: -40px 0px;
+}
+
+#game-field .dino-orange {
+    background-position: 0px 0px;
+}
+
+#game-field .dino-red {
+    background-position: -80px 0px;
+}
+
+#game-field .dino-blue {
+    background-position: -40px -40px;
+}
+
+#game-field .dino-green {
+    background-position: 0px -40px;
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
+}

@@ -1,0 +1,60 @@
+body {
+    margin: 40px;
+}
+
+#controls {
+    float: left;
+}
+
+span {
+    width: 90px;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+select {
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    width: 90px;
+    cursor: pointer;
+}
+
+#build-control {
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    margin: 30px;
+}
+
+#result-field {
+    position: relative;
+    border: 4px dashed;
+    width: 720px;
+    height: 400px;
+    margin: 20px 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.animationInstance {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120px;
+    text-shadow: black 0px 0px 2px;
+    animation: 6s linear infinite;
+}
+
+@keyframes rotate { 
+    100% { transform:rotate(360deg); } 
+}
+
+@keyframes fade { 
+    50% { opacity: 0 }
+    100% { opacity: 1 } 
+}

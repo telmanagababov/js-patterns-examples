@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+  <div id="tickets-panel"></div>
+  <div id="history-panel">
+    <button id="history-panel-prev">Prev</button>
+    <button id="history-panel-next">Next</button>
+  </div>
+  <div id="config-panel">
+    <button id="config-panel-button">Config</button>
+  </div>
+  <div id="config-area" class="hidden">
+    <textarea id="config-area-input"></textarea>
+    <button id="config-area-cancel">CANCEL</button>
+    <button id="config-area-ok">OK</button>
+  </div>
+</body>
+
+<script src="src/common/StatesStoreTaker.js"></script>
+<script src="src/panel/ConfigPanel.js"></script>
+<script src="src/panel/HistoryPanel.js"></script>
+<script src="src/ticket/TicketView.js"></script>
+<script src="src/ticket/TicketsState.js"></script>
+<script src="src/ticket/TicketsPanel.js"></script>
+<script src="src/main.js"></script>
+</html>

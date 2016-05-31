@@ -1,0 +1,84 @@
+body {
+  margin: 40px;
+}
+
+#controls {
+  border: 2px solid #c30;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#controls button {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px;
+  text-shadow: 2px 1px #444;
+}
+
+#controls button:hover {
+  background-color: rgba(0,0,0,0);
+  border: 4px solid #888;
+}
+
+#controls #control-a {
+  color: #f00;
+}
+
+#controls #control-b {
+  color: #0f0;
+}
+
+#controls #control-c {
+  color: #00f;
+}
+
+#controls #control-d {
+  color: #ccc;
+}
+
+#controls #control-e {
+  color: #ff0;
+}
+
+#controls #control-f {
+  color: #f0f;
+}
+
+#controls #control-g {
+  color: #0ff;
+}
+
+#controls #control-h {
+  color: #fff;
+}
+
+#widgets {
+  margin-top: 40px;
+}
+
+#widgets .widget {
+  float: left;
+  margin: 0 20px 20px 0;
+  border-radius: 6px;
+  width: 200px;
+  border: 2px solid #483;
+}
+
+#widgets .title {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #346;
+}
+
+#widgets .content {
+  margin: 25px 0 15px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #369;
+  text-align: center;
+}

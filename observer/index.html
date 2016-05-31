@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+<div id="controls">
+  <button id="control-a">A</button>
+  <button id="control-b">B</button>
+  <button id="control-c">C</button>
+  <button id="control-d">D</button>
+  <button id="control-e">E</button>
+  <button id="control-f">F</button>
+  <button id="control-g">G</button>
+  <button id="control-h">H</button>
+</div>
+<div id="widgets">
+  <div id="widget-char" class="widget">
+    <div class="title">widget [char]</div>
+    <div class="content"></div>
+  </div>
+  <div id="widget-type" class="widget">
+    <div class="title">widget [type]</div>
+    <div class="content"></div>
+  </div>
+  <div id="widget-color" class="widget">
+    <div class="title">widget [color]</div>
+    <div class="content"></div>
+  </div>
+</div>
+</body>
+
+<script src="src/base/Observarble.js"></script>
+<script src="src/base/Observer.js"></script>
+
+<script src="src/control/Control.js"></script>
+
+<script src="src/widget/CharWidget.js"></script>
+<script src="src/widget/ColorWidget.js"></script>
+<script src="src/widget/TypeWidget.js"></script>
+
+<script src="src/main.js"></script>
+</html>
