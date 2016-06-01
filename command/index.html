@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+<div id="tickets-panel"></div>
+<div id="settings-panel">
+    <div>Settings Panel</div>
+    <label for="sort">Sort: </label>
+    <form name="sort" id="sort">
+        <input type="radio" name="ascend" value="ascend">Ascend<br>
+        <input type="radio" name="descend" value="descend">Descend<br>
+        <input type="radio" name="random" value="random">Random
+    </form>
+    <laberl for="tickets">Tickets: </laberl>
+    <form name="tickets" id="tickets">
+        <input type="radio" name="5" value="5">5<br>
+        <input type="radio" name="10" value="10">10<br>
+        <input type="radio" name="15" value="15">15
+    </form>
+    <label for="lucky">Lucky Number: </label><input type="text" name="lucky" value="0" id="lucky">
+    <button>Ok</button>
+</div>
+</body>
+
+<script src="src/ticket/TicketView.js"></script>
+<script src="src/ticket/TicketsPanel.js"></script>
+<script src="src/action/IAction.js"></script>
+<script src="src/action/SelectAction.js"></script>
+<script src="src/action/SetLuckyAction.js"></script>
+<script src="src/action/SortAction.js"></script>
+<script src="src/settings/SettingsPanel.js"></script>
+<script src="src/settings/SettingsManager.js"></script>
+<script src="src/Game.js"></script>
+<script src="src/main.js"></script>
+</html>
