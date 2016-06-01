@@ -10,10 +10,6 @@ function SettingsPanel(selector) {
 		return 0;	
 	};
 	
-	self.getLuckyNumber = function () {
-		return 0;
-	};
-	
 	self.getSortType = function () {
 		return 0;
 	};

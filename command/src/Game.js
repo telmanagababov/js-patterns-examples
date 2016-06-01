@@ -8,7 +8,6 @@ function Game() { /*CLIENT*/
 	this.start = function() {
 		settingsPanel.onApply = function() {
 			settingsManager.addSetting(new SelectAction(ticketsPanel, settingsPanel.getSelectedTickets()));
-			settingsManager.addSetting(new SetLuckyAction(ticketsPanel, settingsPanel.getLuckyNumber()));
 			settingsManager.addSetting(new SortAction(ticketsPanel, settingsPanel.getSortType()));
 			settingsManager.applySettings();
 		}

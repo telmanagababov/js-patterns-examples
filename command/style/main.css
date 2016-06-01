@@ -23,9 +23,10 @@ body {
     cursor: pointer;
     border: 4px solid rgba(185, 70, 25, 1);
     border-radius: 6px;
+    box-shadow: 0 6px 4px -4px #000;
     overflow: hidden;
     transfrom: translate(0, 0);
-    box-shadow: 0 6px 4px -4px #000;
+    /*noinspection CssInvalidPropertyValue*/
     transition: box-shadow 0.25s transform 0.25s;
 }
 
@@ -55,7 +56,7 @@ body {
 .ticket .label {
     font-size: 16px;
     font-weight: bold;
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", sans-serif;
     position: relative;
     top: -5px;
     left: 2px;
@@ -69,9 +70,20 @@ body {
 
 #settings-panel {
     margin: 15px 0;
-    padding: 10px;
+    padding: 15px;
     border: 2px dashed;
-    background-color: #950;
+    background-color: #b07c06;
     color: #eee;
     display: inline-block;
+}
+
+#settings-panel .picker {
+    display: inline-block;
+}
+
+#settings-panel label {
+}
+
+#settings-apply-control {
+    padding: 5px;
 }

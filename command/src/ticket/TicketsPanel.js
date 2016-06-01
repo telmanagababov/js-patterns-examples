@@ -1,7 +1,6 @@
 function TicketsPanel(selector) {
 	var TICKETS_AMOUNT = 15;
-	var self = this,
-		ticketsPanel = document.getElementById(selector),
+	var ticketsPanel = document.getElementById(selector),
 		tickets = [];
 
 	for (var i = 0; i < TICKETS_AMOUNT; i++) {
@@ -11,14 +10,10 @@ function TicketsPanel(selector) {
 	}
 
 	this.selectTickets = function(tickets) {
-		console.log("panel: select", tickets);
-	};
-
-	this.setLuckyNumber = function(lucky) {
-		console.log("panel: setLuckyNumber", lucky);
+		console.log("ticketsPanel: select", tickets);
 	};
 
 	this.sort = function(type) {
-		console.log("panel: sort", type);
+		console.log("ticketsPanel: sort", type);
 	};
 }
