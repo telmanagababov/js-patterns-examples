@@ -68,12 +68,30 @@ body {
     color: #b42;
 }
 
+#open-settings-control {
+    margin: 20px 0;
+}
+
 #settings-panel {
     margin: 15px 0;
-    padding: 15px;
+    padding: 20px 30px;
     border: 2px dashed;
     background-color: #b07c06;
     color: #eee;
+}
+
+#settings-panel .header {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#settings-panel .content {
+    padding: 15px;
+    color: #fc0;
+}
+
+#settings-panel label {
+    width: 70px;
     display: inline-block;
 }
 
@@ -81,9 +99,20 @@ body {
     display: inline-block;
 }
 
-#settings-panel label {
+#settings-panel .control {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 4px 2px -4px #000;
 }
 
-#settings-apply-control {
-    padding: 5px;
+#settings-panel .control:hover {
+    box-shadow: 0 6px 4px -4px #000;
+}
+
+.hidden {
+    display: none;
 }

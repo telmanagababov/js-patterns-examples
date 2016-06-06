@@ -1,7 +1,7 @@
 var TICKETS_PANEL_ID = "tickets-panel",
     HISTORY_PANEL_ID = "history-panel",
     CONFIG_PANEL_ID = "config-panel";
-var ticketsPanel = new TicketsPanel(TICKETS_PANEL_ID),
+var ticketsPanel = new TicketsManager(TICKETS_PANEL_ID),
     statesCareTaker = new StatesCareTaker(),
     historyPanel = new HistoryPanel(HISTORY_PANEL_ID),
     configPanel = new ConfigPanel(CONFIG_PANEL_ID);

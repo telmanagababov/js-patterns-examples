@@ -10,6 +10,8 @@ function TicketView(id) {
 	label.innerHTML = id;
 	ticket.classList.add(TICKET_CLASS);
 	ticket.appendChild(label);
+	self.isSelected = false;
+	self.id = id;
 
 	ticket.addEventListener("click", function () {
 		self.isSelected = !self.isSelected;
@@ -17,14 +19,22 @@ function TicketView(id) {
 		self.onChanged();
 	});
 
-	self.isSelected = false;
-
 	self.updateState = function () {
 		if (self.isSelected === true) {
 			ticket.classList.add(SELECTED_CLASS);
 		} else {
 			ticket.classList.remove(SELECTED_CLASS);
 		}
+	};
+	
+	self.select = function () {
+		self.isSelected = true;
+		self.updateState();
+	};
+
+	self.unselect = function () {
+		self.isSelected = false;
+		self.updateState();
 	};
 
 	self.getView = function () {

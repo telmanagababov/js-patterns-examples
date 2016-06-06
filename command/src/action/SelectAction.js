@@ -1,6 +1,6 @@
 function SelectAction(ticketsPanel, selectedTickets) {
 	this.ticketsPanel = ticketsPanel;
-	this.selectedTickets = selectedTickets;
+	this.selectedTickets = parseInt(selectedTickets);
 }
 SelectAction.prototype = Object.create(IAction.prototype);
 

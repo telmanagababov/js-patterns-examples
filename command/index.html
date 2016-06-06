@@ -6,38 +6,47 @@
 
 <body>
 <div id="tickets-panel"></div>
+<button class="control" id="open-settings-control">Settings</button>
 <div id="settings-panel">
-    <div>Settings Panel</div>
-    <label for="sort-picker">Sort: </label>
-    <div id="sort-picker" class="picker">
-        <input type="radio" name="ascend" value="ascend" id="ascend">
-        <label for="ascend">Ascend</label>
-        <input type="radio" name="descend" value="descend" id="descend">
-        <label for="descend">Descend</label>
-        <input type="radio" name="random" value="random" id="random">
-        <label for="random">Random</label>
+    <div class="header">Settings Panel</div>
+    <div class="content">
+        <label for="sort-picker">Sort: </label>
+        <div id="sort-picker" class="picker">
+            <input type="radio" name="sort" value="ascend" id="ascend">
+            <label for="ascend">Ascend</label>
+            <input type="radio" name="sort" value="descend" id="descend">
+            <label for="descend">Descend</label>
+            <input type="radio" name="sort" value="random" id="random">
+            <label for="random">Random</label>
+        </div>
+        <br>
+        <label for="tickets-picker">Tickets: </label>
+        <div id="tickets-picker" class="picker">
+            <input type="radio" name="select" value="5" id="value5">
+            <label for="value5">5</label>
+            <input type="radio" name="select" value="10" id="value10">
+            <label for="value10">10</label>
+            <input type="radio" name="select" value="15" id="value15">
+            <label for="value15">15</label>
+        </div>
+        <br>
     </div>
-    <br>
-    <label for="tickets-picker">Tickets: </label>
-    <div id="tickets-picker" class="picker">
-        <input type="radio" name="5" value="5" id="value5">
-        <label for="value5">5</label>
-        <input type="radio" name="10" value="10" id="value10">
-        <label for="value10">10</label>
-        <input type="radio" name="15" value="15" id="value15">
-        <label for="value15">15</label>
-    </div>
-    <br>
-    <button id="settings-apply-control">Apply</button>
+    <button class="control" id="settings-cancel-control">Reset</button>
+    <button class="control" id="settings-apply-control">Apply</button>
 </div>
 </body>
 
+<script src="src/constant/ViewState.js"></script>
+<script src="src/control/Picker.js"></script>
+<script src="src/control/Control.js"></script>
 <script src="src/ticket/TicketView.js"></script>
-<script src="src/ticket/TicketsPanel.js"></script>
+<script src="src/ticket/TicketsManager.js"></script>
 <script src="src/action/IAction.js"></script>
 <script src="src/action/SelectAction.js"></script>
 <script src="src/action/SortAction.js"></script>
-<script src="src/settings/SettingsPanel.js"></script>
+<script src="src/action/UnsortAction.js"></script>
+<script src="src/action/UnselectAction.js"></script>
+<script src="src/settings/SettingsPanelView.js"></script>
 <script src="src/settings/SettingsManager.js"></script>
 <script src="src/Game.js"></script>
 <script src="src/main.js"></script>
