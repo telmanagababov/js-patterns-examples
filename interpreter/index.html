@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+<div id="tickets-panel"></div>
+<button class="control" id="open-settings-control">Settings</button>
+<div id="settings-panel">
+    <div class="header">Settings Panel</div>
+    <div class="options">
+        <label for="background-image-picker">Image Bg</label>
+        <select id="background-image-picker">
+            <option value="http://www.onlinebingo-gaming.com/wp-content/uploads//2010/05/75-bingo-card-258x300.jpg">default</option>
+            <option value="http://sweetly.weebly.com/uploads/6/7/9/5/6795120/8099423_orig.jpg">original</option>
+            <option value="http://www.casino-legal-france.org/img/site/les-modes-de-jeu-au-bingo.jpg">france</option>
+        </select>
+        <label for="background-shade-picker">Shade Bg</label>
+        <select id="background-shade-picker">
+            <option value="brown">brown</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="grey">grey</option>
+        </select>
+        <label for="background-opacity-picker">Opacity Bg</label>
+        <select id="background-opacity-picker">
+            <option value="0.75">default</option>
+            <option value="0.95">opaque</option>
+            <option value="0.55">transparent</option>
+        </select>
+        <label for="label-color-picker">Color Lbl</label>
+        <select id="label-color-picker">
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="brown">brown</option>
+            <option value="grey">grey</option>
+        </select>
+        <label for="ticket-size-picker">Ticket size</label>
+        <select id="ticket-size-picker">
+            <option value="80x80">default</option>
+            <option value="120x120">large</option>
+            <option value="40x40">small</option>
+        </select>
+    </div>
+    <div class="content">
+        <label for="settings-input">Settings</label>
+        <textarea id="settings-input"></textarea>
+    </div>
+    <button class="control" id="settings-apply-control">Apply</button>
+    <button class="control" id="settings-ok-control">Ok</button>
+</div>
+</body>
+
+<script src="src/constant/ViewState.js"></script>
+<script src="src/control/Control.js"></script>
+<script src="src/settings/OptionsPanel.js"></script>
+<script src="src/settings/SettingsPanel.js"></script>
+<script src="src/ticket/Ticket.js"></script>
+<script src="src/ticket/TicketsManager.js"></script>
+<script src="src/ticketstyleexpression/StyleExpression.js"></script>
+<script src="src/ticketstyleexpression/BgImageExpression.js"></script>
+<script src="src/ticketstyleexpression/BgOpacityExpression.js"></script>
+<script src="src/ticketstyleexpression/BgShadeExpression.js"></script>
+<script src="src/ticketstyleexpression/LblColorExpression.js"></script>
+<script src="src/ticketstyleexpression/TicketSizeExpression.js"></script>
+<script src="src/ticketstyle/Style.js"></script>
+<script src="src/ticketstyle/TicketStyleFactory.js"></script>
+<script src="src/Game.js"></script>
+<script src="src/main.js"></script>
+</html>
