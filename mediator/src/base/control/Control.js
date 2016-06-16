@@ -6,6 +6,10 @@ function Control(selector) {
 		self.onClick();
 	};
 	
+	this.setEnabled = function (value) {
+		button.disabled = !value;
+	};
+	
 	this.show = function () {
 		button.classList.remove(ViewState.HIDDEN);
 	};

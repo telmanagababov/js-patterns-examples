@@ -1,19 +1,15 @@
-function SettingsPanelComponent() {
-	var SLIDER_PANEL_SELECTOR = "#slider-panel",
-		OK_CONTROL_SELECTOR = "#settings-ok-control",
-		APPLY_CONTROL_SELECTOR = "#settings-apply-control";
-	var self = this,
-		view = document.querySelector(SLIDER_PANEL_SELECTOR),
-		slider = new Slider(),
-		okControl = new Control(OK_CONTROL_SELECTOR),
-		applyControl = new Control(APPLY_CONTROL_SELECTOR);
+function SliderPanelComponent(gameMediator) {
+	BaseComponent.call(this, gameMediator);
 
-	okControl.onClick = function () {
-		self.onOk();
+	var SLIDER_PANEL_SELECTOR = "#slider-panel";
+	var view = document.querySelector(SLIDER_PANEL_SELECTOR),
+		slider = new Slider(SLIDER_PANEL_SELECTOR);
+
+	slider.onPrev = function () {
+		gameMediator.switchToPrevPage();
 	};
-
-	applyControl.onClick = function () {
-		self.onApply();
+	slider.onNext = function () {
+		gameMediator.switchToNextPage();
 	};
 	
 	this.show = function() {
@@ -24,10 +20,14 @@ function SettingsPanelComponent() {
 		view.classList.add(ViewState.HIDDEN);
 	};
 	
-	this.getConfiguration = function() {
-		return slider.getConfiguration();
+	this.setInfo = function (value) {
+		slider.setInfo(value);
 	};
 	
-	this.onOk = function() {};
-	this.onApply = function() {};
+	this.updateState = function (hasPrev, hasNext) {
+		slider.updateState(hasPrev, hasNext);
+	};
+
+	gameMediator.registerSliderPanel(this);
 }
+SliderPanelComponent.prototype = Object.create(BaseComponent.prototype);

@@ -1,10 +1,7 @@
 window.onload = function() {
 
-	var gameMediator = new GameMediator(),
-		ticketsManager = new TicketsPanelComponent(),
-		sliderPanel = new SliderPanelComponent();
-	
-	gameMediator.registerTicketsPanel(ticketsManager);
-	gameMediator.registerSliderPanel(sliderPanel);
+	var gameMediator = new GameMediator();
+	new TicketsPanelComponent(gameMediator);
+	new SliderPanelComponent(gameMediator);
 	
 };

@@ -1,44 +1,54 @@
-function TicketsPanelComponent() {
-	var TICKETS_PANEL_SELECTOR = "#tickets-panel",
-		PANEL_OFFSET = 20,
-		TICKET_OFFSET = 5;
-	var ticketsPanel = document.querySelector(TICKETS_PANEL_SELECTOR),
-		panelWidth = ticketsPanel.offsetWidth - PANEL_OFFSET*2,
-		panelHeight = ticketsPanel.offsetHeight - PANEL_OFFSET*2,
-		ticketsStyleFactory = new TicketStyleFactory(),
-		ticketsAmount = 0,
-		tickets = [],
-		currentTicket = null,
-		style = null,
-		i = 0;
+function TicketsPanelComponent(gameMediator) {
+	BaseComponent.call(this, gameMediator);
 	
-	this.applyConfiguration = function (configuration) {
-		style = ticketsStyleFactory.parse(configuration);
-		ticketsAmount = getTicketsAmount(style);
-		for (i = 0; i < ticketsAmount; i++) {
+	var TICKETS_PANEL_SELECTOR = "#tickets-panel",
+		TICKETS_PAGE_AMOUNT = 15,
+		TICKETS_PAGES = 4;
+	var ticketsPanel = document.querySelector(TICKETS_PANEL_SELECTOR),
+		currentPage = 1,
+		tickets = [];
+
+	this.setPage = function (value) {
+		currentPage = value;
+		updateTickets();
+	};
+
+	this.getCurrentPage = function () {
+		return currentPage;
+	};
+
+	this.isFirstPage = function () {
+		return currentPage === 1;
+	};
+
+	this.isLastPage = function () {
+		return currentPage === TICKETS_PAGES;
+	};
+
+	function updateTickets() {
+		var firstTicket = (currentPage - 1) * TICKETS_PAGE_AMOUNT,
+			lastTicket = firstTicket + TICKETS_PAGE_AMOUNT,
+			currentTicket = null;
+		tickets.forEach(function(ticket) {
+			ticket.hide();
+		});
+		for (var i = firstTicket; i < lastTicket; i++) {
 			currentTicket = getTicket(i);
-			currentTicket.updateStyle(style);
 			currentTicket.show();
 		}
-		for (i = ticketsAmount; i < tickets.length; i++) {
-			tickets[i].hide();
-		}
-	};
-	
-	function getTicketsAmount(ticketSize) {
-		var ticketHeight = parseInt(ticketSize.height) + TICKET_OFFSET*2,
-			ticketWidth = parseInt(ticketSize.width) + TICKET_OFFSET*2,
-			rows = Math.floor(panelHeight / ticketHeight),
-			cols = Math.floor(panelWidth / ticketWidth);
-		return rows * cols;
 	}
 	
 	function getTicket(id) {
 		if(!tickets[id]) {
-			var newTicket = new Ticket(i + 1);
+			var newTicket = new Ticket(id + 1);
 			ticketsPanel.appendChild(newTicket.getView());
-			tickets.push(newTicket);
+			tickets[id] = newTicket;
 		}
 		return tickets[id];
 	}
+
+	updateTickets();
+	gameMediator.registerTicketsPanel(this);
 }
+
+TicketsPanelComponent.prototype = Object.create(BaseComponent.prototype);

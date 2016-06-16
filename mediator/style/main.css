@@ -1,16 +1,25 @@
+html {
+    background-image:
+            linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+            url(http://static.vecteezy.com/system/resources/previews/000/097/033/non_2x/free-bingo-card-vector-icon.jpg);
+}
+
 body {
-    margin: 30px;
+    margin: 70px 30px;
 }
 
 #tickets-panel {
     width: 540px;
     height: 300px;
     padding: 20px;
+    margin: auto;
     border: 4px solid #000;
     border-radius: 12px;
+    background-color: #F5EDDD;
+    box-shadow: 0 2px 2px;
 }
 
-.ticket {
+#tickets-panel .ticket {
     position: relative;
     width: 80px;
     height: 80px;
@@ -29,12 +38,12 @@ body {
     transition: box-shadow 0.25s transform 0.25s;
 }
 
-.ticket:hover {
+#tickets-panel .ticket:hover {
     transform: translate(0, -5px);
     box-shadow: 0 14px 8px -8px #000;
 }
 
-.ticket .bg {
+#tickets-panel .ticket .bg {
     position: absolute;
     top: 0;
     right: 0;
@@ -45,15 +54,15 @@ body {
     content: ""
 }
 
-.ticket.selected {
+#tickets-panel .ticket.selected {
     border: 4px solid rgba(255, 80, 15, 1);
 }
 
-.ticket.selected:before {
-    background-color: rgba(255, 140, 15, 0.8);
+#tickets-panel .ticket.selected .bg {
+    background-color: rgba(156, 60, 10, 0.8);
 }
 
-.ticket .label {
+#tickets-panel .ticket .label {
     font-size: 16px;
     font-weight: bold;
     font-family: "Comic Sans MS", sans-serif;
@@ -64,18 +73,64 @@ body {
     text-shadow: 2px 1px 2px #444, 2px 1px 2px #444;
 }
 
-.ticket.selected .label {
+#tickets-panel .ticket.selected .label {
     color: #b42;
 }
 
 #slider-panel {
     width: 540px;
-    height: 25px;
     padding: 20px;
+    margin: 4px auto;
     border: 4px solid #000;
     border-radius: 12px;
+    background-color: #F5EDDD;
+    box-shadow: 0px 2px 2px;
+}
+
+#slider-panel button {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: 25px solid #74C;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#slider-panel button:hover {
+    border-color: #9271cc;
+}
+
+#slider-panel button:disabled {
+    border-color: rgba(35, 35, 70, 0.51);
+    cursor: default;
+}
+
+#slider-panel #prev-button {
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    float: left;
+}
+
+#slider-panel #next-button {
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    float: right;
+}
+
+#slider-panel #current-page-info {
+    font-size: 43px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px #000;
+    text-align: center;
+    color: #F04;
+    cursor: default;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
