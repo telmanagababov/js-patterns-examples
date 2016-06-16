@@ -34,7 +34,7 @@ function TicketsManager(selector) {
 	
 	function getTicket(id) {
 		if(!tickets[id]) {
-			var newTicket = new Ticket(i + 1);
+			var newTicket = new Ticket(id + 1);
 			ticketsPanel.appendChild(newTicket.getView());
 			tickets.push(newTicket);
 		}
