@@ -8,7 +8,7 @@ TicketsCollection.prototype = {
 		var tickets = this.createTickets(ticketsRange);
 		this.resetPanel();
 		for (var i = 0, len = tickets.length; i < len; i++) {
-			this.addTicket(tickets[i]);
+			this.renderTicket(tickets[i]);
 		}
 	},
 
