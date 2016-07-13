@@ -3,7 +3,7 @@ function OptionsPanel(selector) {
 		BACKGROUND_SHADE_SELECTOR = "#background-shade-picker",
 		BACKGROUND_OPACITY_SELECTOR = "#background-opacity-picker",
 		LABEL_COLOR_SELECTOR = "#label-color-picker",
-		TICKET_SIZE_SELECTOR = "#ticket-size-picker",
+		TICKET_SIZE_SELECTOR = "#graphic-size-picker",
 		SETTINGS_INPUT_SELECTOR = "#settings-input";
 	var backgroundImagePicker = document.querySelector(BACKGROUND_IMAGE_SELECTOR),
 		backgroundShadePicker = document.querySelector(BACKGROUND_SHADE_SELECTOR),

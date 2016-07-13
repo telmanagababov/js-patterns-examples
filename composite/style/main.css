@@ -1,0 +1,105 @@
+html {
+    background-image:
+            linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+            url(http://static.vecteezy.com/system/resources/previews/000/097/033/non_2x/free-bingo-card-vector-icon.jpg);
+}
+
+body {
+    margin: 70px 30px;
+}
+
+#tickets-panel {
+    width: 540px;
+    height: 300px;
+    padding: 20px;
+    margin: auto;
+    border: 4px solid #000;
+    border-radius: 12px;
+    background-color: #F5EDDD;
+    box-shadow: 0 2px 2px;
+    overflow: hidden;
+}
+
+#tickets-panel .tickets-container {
+    border: 2px dashed;
+    padding: 10px;
+    margin: 5px;
+}
+
+#tickets-panel .tickets-container-label {
+    font-size: 20px;
+    text-align: left;
+}
+
+#tickets-panel .ticket {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    margin: 5px;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    background-image: url("http://www.bingobuzz.com.au/images/bingo-ticket.gif");
+    display: inline-block;
+    cursor: pointer;
+    border: 4px solid rgba(185, 70, 25, 1);
+    border-radius: 6px;
+    box-shadow: 0 6px 4px -4px #000;
+    overflow: hidden;
+    transfrom: translate(0, 0);
+    /*noinspection CssInvalidPropertyValue*/
+    transition: box-shadow 0.25s transform 0.25s;
+}
+
+#tickets-panel .ticket.ticket75 .label {
+    top: 6px;
+    left: 12px;
+}
+
+#tickets-panel .ticket:hover {
+    transform: translate(0, -2px);
+    box-shadow: 0 14px 8px -8px #000;
+}
+
+#tickets-panel .ticket .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(185, 110, 25, 0.8);
+    opacity: 0.8;
+    content: ""
+}
+
+#tickets-panel .ticket.selected {
+    -webkit-filter: grayscale(100%);
+}
+
+#tickets-panel .ticket .label {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", sans-serif;
+    position: relative;
+    top: -5px;
+    left: 2px;
+    color: #dd2;
+    text-shadow: 2px 1px 2px #444, 2px 1px 2px #444;
+}
+
+#control-panel {
+    width: 540px;
+    padding: 20px;
+    margin: 4px auto;
+    border: 4px solid #000;
+    border-radius: 12px;
+    background-color: #F5EDDD;
+    box-shadow: 0 2px 2px;
+}
+
+#control-panel .control {
+    width: 80px;
+    margin: 20px;
+    float: left;
+    line-height: 40px;
+    font-weight: bold;
+}
