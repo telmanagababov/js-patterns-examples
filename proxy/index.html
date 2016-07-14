@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+<div id="dialog-area"></div>
+<div id="tickets-panel"></div>
+<div id="info-panel">
+    <div class="info" id="ticket-price">
+        <span class="info-label">Ticket price:</span>
+        <span class="info-value">0</span>
+    </div>
+    <div class="info" id="selected-tickets">
+        <span class="info-label">Tickets to buy:</span>
+        <span class="info-value">0</span>
+    </div>
+    <div class="info" id="total-price">
+        <span class="info-label">Total price:</span>
+        <span class="info-value">0</span>
+    </div>
+    <div class="info" id="balance">
+        <span class="info-label">Balance:</span>
+        <span class="info-value">0</span>
+    </div>
+    <div class="input" id="ltm-mode">
+        <input type="checkbox" class="info-input" title="LTM mode" >
+        <span class="info-label">LTM mode</span>
+    </div>
+</div>
+</body>
+
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-darkness/jquery-ui.min.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+<script src="src/common/GameModel.js"></script>
+<script src="src/info/InfoPanel.js"></script>
+<script src="src/ticket/view/ITicket.js"></script>
+<script src="src/ticket/view/Ticket.js"></script>
+<script src="src/ticket/view/SecureTicket.js"></script>
+<script src="src/ticket/TicketsPanel.js"></script>
+<script src="src/main.js"></script>
+</html>
