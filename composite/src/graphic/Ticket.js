@@ -1,6 +1,7 @@
 function Ticket(id) {
 	var self = this;
 
+	this._CONTAINER_TYPE = "div";
 	this._TICKET_CLASS = "ticket";
 	this._BACKGROUND_CLASS = "bg";
 	this._SELECTED_CLASS = "selected";
@@ -43,17 +44,17 @@ Ticket.prototype._updateState =function() {
 	}
 };
 Ticket.prototype._getTicket = function() {
-	var ticket = document.createElement("div");
+	var ticket = document.createElement(this._CONTAINER_TYPE);
 	ticket.classList.add(this._TICKET_CLASS);
 	return ticket;
 };
 Ticket.prototype._getBg = function() {
-	var bg = document.createElement("div");
+	var bg = document.createElement(this._CONTAINER_TYPE);
 	bg.classList.add(this._BACKGROUND_CLASS);
 	return bg;
 };
 Ticket.prototype._getLabel = function() {
-	var label = document.createElement("div");
+	var label = document.createElement(this._CONTAINER_TYPE);
 	label.classList.add(this._LABEL_CLASS);
 	label.innerHTML = this._id;
 	return label;

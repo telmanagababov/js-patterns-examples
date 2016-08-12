@@ -1,6 +1,11 @@
 function TicketsContainer(label) {
+	this._CONTAINER_TYPE_SELECTOR = "div";
+	this._CONTAINER_SELECTOR = "tickets-container";
+	this._CONTAINER_LABEL_SELECTOR = "tickets-container-label";
+
 	this._graphics = [];
 	this._container = this._getContainer();
+
 	if(label) {
 		this._label = this._getLabel(label);
 		this._container.appendChild(this._label);
@@ -32,16 +37,14 @@ TicketsContainer.prototype.setBorder =  function(value) {
 	});
 	this._container.style.borderColor = value;
 };
-
 TicketsContainer.prototype._getContainer =  function() {
-	var container = document.createElement("div");
-	container.classList.add("tickets-container");
+	var container = document.createElement(this._CONTAINER_TYPE_SELECTOR);
+	container.classList.add(this._CONTAINER_SELECTOR);
 	return container;
 };
-
 TicketsContainer.prototype._getLabel =  function(text) {
-	var label = document.createElement("div");
-	label.classList.add("tickets-container-label");
+	var label = document.createElement(this._CONTAINER_TYPE_SELECTOR);
+	label.classList.add(this._CONTAINER_LABEL_SELECTOR);
 	label.innerHTML = text;
 	return label;
 };
