@@ -26,10 +26,7 @@ function SecureTicket(id, price, roundInfo) {
 		var dialogArea = document.body.appendChild(document.createElement("div"));
 		$(dialogArea).text("You have no enough money").dialog({
 			modal: true,
-			title: "error",
-			close: function() {
-				document.body.removeChild(dialogArea);
-			}
+			title: "error"
 		});
 	}
 
