@@ -24,7 +24,7 @@ function SecureTicket(id, price, roundInfo) {
 
 	function showSecureInfo() {
 		var dialogArea = document.body.appendChild(document.createElement("div"));
-		$(dialogArea).text("You have no enough money").dialog({
+		$(dialogArea).text("You have not enough money").dialog({
 			modal: true,
 			title: "error"
 		});
@@ -35,4 +35,4 @@ function SecureTicket(id, price, roundInfo) {
 	self.onClick = function() {};
 	self.onToggleState = function() {};
 }
-Ticket.prototype = Object.create(Ticket.prototype);
+SecureTicket.prototype = Object.create(Ticket.prototype);
